@@ -46,7 +46,7 @@ ACTION-IF-FOUND sets the variable INTERFERENCE_SIZES, which is uses for conditio
 #		define CACHE_LINE_SIZE std::hardware_destructive_interference_size
 #	elif __cplusplus >= 201402L
 #		define CACHE_LINE_SIZE (2 * sizeof(std::max_align_t) & (2 * sizeof(std::max_align_t) - 1)) == 0 ? \
-						2 * sizeof(std::max_align_t) : nearestPowerOf2(2 * sizeof(std::max_align_t))
+					2 * sizeof(std::max_align_t) : nearestPowerOf2(2 * sizeof(std::max_align_t))
 #	else
 #		define CACHE_LINE_SIZE 64
 #	endif
