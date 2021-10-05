@@ -22,7 +22,7 @@ if test "$HAVE_CXX17" = "1"; then
   fi
 fi
 ```
-where the variable is set earlier by the following code:
+where the variable HAVE_CXX17 is set earlier by the following code:
 
 ```sh
 dnl If the user did not specify a C++ version.
