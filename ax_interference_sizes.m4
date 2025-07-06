@@ -12,7 +12,7 @@
 #
 # LICENSE
 #
-#   Copyright (c) 2021 Yuri Voinov <yvoinov@gmail.com>
+#   Copyright (c) 2021-2025 Yuri Voinov <yvoinov@gmail.com>
 #
 #   Copying and distribution of this file, with or without modification, are
 #   permitted in any medium without royalty provided the copyright notice
@@ -36,7 +36,7 @@ AC_DEFUN([AX_INTERFERENCE_SIZES],[
 #endif
                                  ])],
                     [AC_MSG_RESULT([yes])
-                     AC_SUBST([$1],[1])],
+                     AC_SUBST([$1],[0])],
                     [AC_MSG_RESULT([no])
-                     AC_SUBST([$1],[0])])
+                     AC_SUBST([$1],[1])])
 ])
