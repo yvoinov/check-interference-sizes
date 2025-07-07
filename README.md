@@ -11,7 +11,7 @@ According to [this article](https://stackoverflow.com/questions/67999444/no-memb
 
 Macro set specified environment variable to 1 when compilation and run successful (i.e. interference sizes defined and implemented) and 0 otherwise.
 
-To use, add a macro to configure.ac as shown below (for C++ code):
+To use, add a macro to configure.ac as shown below (an example):
 
 ```sh
 dnl Check if interference_sizes are defined
