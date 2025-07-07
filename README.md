@@ -16,8 +16,12 @@ To use, add a macro to configure.ac as shown below (for C++ code):
 ```sh
 dnl Check if interference_sizes are defined
 AX_INTERFERENCE_SIZES([INTERFERENCE_SIZES])
-if test "$INTERFERENCE_SIZES" = "1"; then
+if test "$INTERFERENCE_SIZES" = "0"; then
   CXXFLAGS="$CXXFLAGS -DINTERFERENCE_SIZES"
+  if test "x$ax_cv_cxx_compiler_vendor" = xgnu; then
+    # Suppress GNU warning: use of std::hardware_destructive_interference_size [-Winterference-size]
+    CXXFLAGS="$CXXFLAGS -Wno-interference-size"
+  fi
 fi
 ```
 
